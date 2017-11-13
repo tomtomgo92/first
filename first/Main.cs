@@ -2,7 +2,7 @@
 
 namespace first
 {
-    class Program
+    class Tvshow
     {
         static void Main(string[] args)
         {
