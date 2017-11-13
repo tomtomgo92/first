@@ -3,20 +3,32 @@ namespace first
 {
     public class Film
     {
-        string title;
-        // var cat;
-        string synopsis;
-        int rate;
-        string img;
+       public string title;
+       public string synopsis;
+       public int rate;
+       public string img;
         // Commentaire[] comList;
-        public Film()
+        // Categorie;
+
+        public Film(string showTitle, string showSynopsis, int showRate, string showImg)
         {
-
-            title = title;
-            synopsis = synopsis;
-            rate = rate;
-            img = img;
-
+            title = showTitle;
+            synopsis = showSynopsis;
+            rate = showRate;
+            img = showImg;
         }
+
+        public string getTitle() {
+           return this.title;
+        } 
+        public string getSynopsis() {
+           return this.synopsis;
+        } 
+        public int getRate() {
+           return this.rate;
+        } 
+        public string getImg() {
+           return this.img;
+        } 
     }
 }
