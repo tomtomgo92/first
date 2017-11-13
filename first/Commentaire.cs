@@ -5,8 +5,8 @@ namespace first
     {
         public Commentaire()
         {
-            var speudo;
-            var texte;
+            string speudo;
+            string texte;
         }
     }
 }
