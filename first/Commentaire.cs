@@ -3,10 +3,15 @@ namespace first
 {
     public class Commentaire
     {
-        public Commentaire()
+        string speudo;
+        string texte;
+
+        public Commentaire(string mySpeudo, string myTexte)
         {
-            string speudo;
-            string texte;
+            myTexte = texte;
+            mySpeudo = speudo;
         }
+
+
     }
 }
