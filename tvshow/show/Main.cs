@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace first
+namespace tvshow
 {
     class Tvshow
     {

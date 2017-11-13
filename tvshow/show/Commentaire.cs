@@ -1,11 +1,11 @@
 ﻿using System;
-namespace first
+namespace tvshow
 {
     public class Commentaire
     {
         public Commentaire()
         {
-            var speudo;
+            var pseudo;
             var texte;
         }
     }

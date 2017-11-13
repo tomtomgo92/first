@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 15.00
 # Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "first", "first.csproj", "{72F24C3C-8B2D-40CE-B5EA-3DD239D10AD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tvshow", "tvshow.csproj", "{72F24C3C-8B2D-40CE-B5EA-3DD239D10AD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "show", "show\show.csproj", "{0F2FD7F2-5E51-470B-AAD5-A3F3C4D6DE82}"
 EndProject
