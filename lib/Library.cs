@@ -48,3 +48,8 @@ namespace lib
         }
     }
 }
+
+insert into library (title,synopsis,category,img, status) values("Stranger Things ", " A Hawkins, en 1983 dans l'Indiana. Lorsque Will Byers disparaît de son domicile, ses amis se lancent dans une recherche semée d’embûches pour le retrouver.
+                Dans leur quête de réponses, les garçons rencontrent une étrange jeune fille en fuite.
+                Les garçons se lient d'amitié avec la demoiselle tatouée du chiffre '11' sur son poignet et au crâne rasé et découvrent petit à petit les détails sur son inquiétante situation. Elle est peut-être la clé de tous les mystères qui se cachent dans cette petite ville en apparence tranquille…
+" , "Science " Fiction, "http://fr.web.img1.acsta.net/r_640_600/b_1_d6d6d6/pictures/17/10/23/14/24/5968627.jpg ", 1);
