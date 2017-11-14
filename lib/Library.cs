@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Microsoft.Data.Sqlite;
 
 namespace lib
 {
@@ -7,6 +8,13 @@ namespace lib
     {
         public Library()
         {
+        var connectionStringBuilder = new SqliteConnectionStringBuilder {
+            DataSource = "library.db"
+        };
+
+        var connection = new SqliteConnection(connectionStringBuilder.ConnectionString);
+
+        
 
             var mediaList = new ArrayList();
 
