@@ -22,7 +22,11 @@ namespace lib
             get { return rate; }
             set { rate = value; }
         }
-        // private Category category;
+        private string category;
+        public string Category {
+            get{return category;}
+            set{category = value;}
+        }
         private string img;
         public string Img
         {
