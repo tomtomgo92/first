@@ -8,24 +8,32 @@ namespace lib
     {
         public Library()
         {
-        var connectionStringBuilder = new SqliteConnectionStringBuilder {
+        var connectionStringBuilder = new SqliteConnectionStringBuilder 
+        {
             DataSource = "myDb.db"
         };
 
 
-using (var connection = new SqliteConnection(connectionStringBuilder)){
+using (var connection = new SqliteConnection())
+{
+
     connection.Open();
+
     var selectCommand = connection.CreateCommand();
+
  selectCommand.CommandText = "SELECT * FROM library";
 
- using (var reader = selectCommand.ExecuteReader()){
-     while (reader.Read()){
-         var message = $"{reader["Brand"]} - {reader["Price"]}";
-         Console.WriteLine(message);
-     }
- }
 
-}
+ using (var reader = selectCommand.ExecuteReader())
+ {
+     while (reader.Read())
+     {
+         var message = $"{reader["ID"]} - {reader["Title"]}";
+         Console.WriteLine(message);
+     };
+ };
+
+};
 
        
 
