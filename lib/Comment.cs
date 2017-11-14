@@ -5,7 +5,7 @@ namespace lib
     public class Comment {
         private string userName;
         public string UserName {
-            get{return username;}
+            get{return userName;}
             set{userName = value;}
         }
         private string text;
