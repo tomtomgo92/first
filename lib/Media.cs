@@ -2,7 +2,7 @@
 
 namespace lib
 {
-    public class Film
+    public abstract class Media
     {
         private string title;
         public string Title
@@ -30,13 +30,6 @@ namespace lib
             set { img = value; }
         }
 
-        public Film(string title, string synopsis, int rate, /* Category category,  */string img)
-        {
-            this.title = title;
-            this.synopsis = synopsis;
-            this.rate = rate;
-            // this.category = category;
-            this.img = img;
-        }
+        
     }
 }
