@@ -34,6 +34,15 @@ namespace lib
             set { img = value; }
         }
 
-        
+        private Boolean status;
+        public Boolean Status{
+            get {return status;}
+            set {status = value;}
+        }
+
+        public Boolean toggleStatus(){
+           return this.status = !this.status;
+        }
+
     }
 }
