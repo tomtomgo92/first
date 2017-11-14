@@ -1,5 +1,5 @@
 ﻿using System;
-//using Film;
+using lib;
 
 namespace app
 {
@@ -7,9 +7,8 @@ namespace app
     {
         static void Main(string[] args)
         {
-           /*  var film = new Film();
-            film.title ="Thor";
-            Console.WriteLine(film.title); */
+            var serie = new Serie();
+
         }
     }
 }

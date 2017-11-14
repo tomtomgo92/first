@@ -7,4 +7,7 @@
     <PackageReference Include="bootstrap" Version="3.3.7" />
     <PackageReference Include="JSON" Version="1.0.1" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\lib.csproj" />
+  </ItemGroup>
 </Project>

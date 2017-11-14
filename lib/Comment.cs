@@ -2,7 +2,7 @@ using System;
 
 namespace lib
 {
-    public class Commentaires {
+    public class Comment {
         
         private string userName;
 
