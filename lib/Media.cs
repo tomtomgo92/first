@@ -16,8 +16,8 @@ namespace lib
             get { return synopsis; }
             set { synopsis = value; }
         }
-        private int rate;
-        public int Rate
+        private double rate;
+        public double Rate
         {
             get { return rate; }
             set { rate = value; }
