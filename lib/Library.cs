@@ -13,10 +13,9 @@ namespace lib
             DataSource = "myDb.db"
         };
 
-
 using (var connection = new SqliteConnection())
 {
-
+ 
     connection.Open();
 
     var selectCommand = connection.CreateCommand();
