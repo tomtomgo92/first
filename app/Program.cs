@@ -1,8 +1,9 @@
 ﻿using System;
 using lib;
-using Microsoft.Data.Sqlie;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+
 
 namespace app
 {
@@ -12,63 +13,50 @@ namespace app
         {
             Console.WriteLine("coucou");
 
-            public DbSet<film> films { get; set; }
-            public DbSet<serie> series { get; set; }
-            
-            protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+            using (var db = new MovieContext())
             {
-                optionsBuilder.UseSqlite("Data Source=myBd.db");
-            }
+                var theFilms = new Film
+                {
+                    Title = "test",
+                    Synopsis = "test sy",
+                    Img = "test url",
+                    Rate = 2,
+                    Status = true,
+                    Category = "cat",
+                    Director = "director"
+                };
 
-        using (var db = new MovieContext())
-            {
-                db.films.Add(new Film = (title ="test", synopsis ="test sy", img= "test url", rate=2, states=0, category="cat", director="direct"));
-                var count = db.SaveChanges();
-                 db.series.Add(new Serie = (title ="test ser", synopsis ="test sy ser", img= "test url ser", rate=2, states=1, category="czt", saison=2));
-                var count = db.SaveChanges();
-                Console.WriteLine("{0} records saved to database", count);
+                db.Film.Add(theFilms);
+
+
+                Console.WriteLine("{0} records saved to database");
 
                 Console.WriteLine();
                 Console.WriteLine("All blogs in database:");
-                foreach (var blog in db.Film)
-                {
-                    Console.WriteLine(" - {0}", film.id);
-                }
+
+                Console.WriteLine(db.SaveChanges());
+                db.SaveChanges();
+
             }
 
               
 
         }
+
     }
 
 
-    public class MovieContext
+
+    public class MovieContext : DbContext
     {
-        public DbSet<film> films { get; set; }
-            public DbSet<serie> series { get; set; }
+        public DbSet<Film> Film { get; set; }
+        public DbSet<Serie> Serie { get; set; }
 
-    }
-    public class Film
-    {  
-        //int id { get; set; }
-        string title { get; set; }
-        string synopsis { get; set; }
-        string img { get; set; }
-        int rate { get; set; }
-        int states { get; set; } //boolean
-        string category { get; set; }
-        string director { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+        {
+            optionBuilder.UseSqlite("Data Source=myDb.db");
+        }
     }
 
-        public class Serie
-    {
-        //int id { get; set; }
-        string title { get; set; }
-        string synopsis { get; set; }
-        string img { get; set; }
-        int rate { get; set; }
-        int states { get; set; } //boolean
-        string category { get; set; }
-        int saison { get; set; }
-    }
 }
+

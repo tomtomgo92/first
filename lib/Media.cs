@@ -2,8 +2,15 @@
 
 namespace lib
 {
-    public abstract class Media
+    public class Media
     {
+        private string id;
+        public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         private string title;
         public string Title
         {
