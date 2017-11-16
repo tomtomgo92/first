@@ -4,16 +4,16 @@ namespace Netflou.Models
 {
     public class NetflouContext : DbContext
     {
-        public NetflouContext(DbContextOptions<NetflouContext> options)
-            : base(options)
-        { }
+
 
         public DbSet<Film> Films { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+            {
             optionsBuilder.UseSqlite("Data Source=netflou.db");
-        }
+            }
+
+ 
     }
 
         public class Film

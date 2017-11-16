@@ -18,13 +18,30 @@ namespace Netflou.Controllers
         public IActionResult About()
         {
             
-            Film filmUn = new Film();
-            filmUn.Title = "test";
+            // Film filmUn = new Film();
+            // filmUn.Title = "test";
+
+            using (var db = new NetflouContext())
+            {
+                //db.Films.Add(new Film { Title = "mathilde" });
+
+              //  var count = db.SaveChanges();
+ 
+
+           
+                foreach (var film in db.Films)
+                {
+                    ViewData["Message"] = film.Title;
+                    //ViewData["Message"] = count;
+                }
 
 
-            ViewData["Message"] = filmUn.Title;
+            
 
             return View();
+        }
+
+
         }
 
         public IActionResult Contact()
