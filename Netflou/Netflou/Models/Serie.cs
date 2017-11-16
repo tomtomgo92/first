@@ -2,11 +2,31 @@ using System;
 
 namespace lib
 {
-    public class Serie : Media {
-        private int seasons;
-        public int Season {
-            get{return seasons;}
-            set{ seasons = value;}
-        } 
+    public class Serie {
+        public int Id
+        {
+            get;
+            set;
+        }
+        public string Title
+        {
+            get;
+            set;
+        }
+        public string Synopsis
+        {
+            get;
+            set;
+        }
+        public string Category
+        {
+            get;
+            set;
+        }
+        public string Seasons
+        {
+            get;
+            set;
+        }
     }
 }

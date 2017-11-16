@@ -12,5 +12,20 @@ namespace lib {
             get;
             set;
         }
+        public string Synopsis
+        {
+            get;
+            set;
+        }
+        public string Category
+        {
+            get;
+            set;
+        }
+        public string Director
+        {
+            get;
+            set;
+        }
     }
 }
