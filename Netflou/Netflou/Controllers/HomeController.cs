@@ -13,12 +13,16 @@ namespace Netflou.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var db = new NetflouContext();
+                foreach (var film in db.Films)
+                {
+                    ViewData["filmList"] += film.Title;
+                }    
+        return View();
         }
 
         public IActionResult About()
-        {
-            
+        {    
             // Film filmUn = new Film();
             // filmUn.Title = "test";
 
@@ -26,6 +30,7 @@ namespace Netflou.Controllers
  using (var db = new NetflouContext())
             {
                 //db.Films.Add(new Film { Title = "mathilde" });
+
 
                 //  var count = db.SaveChanges();
 
@@ -41,6 +46,7 @@ namespace Netflou.Controllers
 
         }
             return View();
+
         }
         public IActionResult Contact()
         {
