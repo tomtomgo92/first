@@ -1,17 +1,17 @@
 ﻿@{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "Ajouter Un Film";
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Titre du Film">
+    </div>
+    <div class="form-group col-md-6">
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Lien de l'image">
+    </div>
+      </div>
+  <button type="submit" class="btn btn-primary">ADD</button>
+</form>

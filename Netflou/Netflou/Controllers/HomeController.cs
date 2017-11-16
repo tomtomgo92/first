@@ -17,6 +17,10 @@ namespace Netflou.Controllers
                 foreach (var film in db.Films)
                 {
                     ViewData["filmList"] += film.Title;
+
+                ViewData["Title"] = film.Title;
+                ViewData["Img"] = film.Img;
+              
                 }    
         return View();
         }
@@ -34,17 +38,25 @@ namespace Netflou.Controllers
 
                 //  var count = db.SaveChanges();
 
-                foreach (var film in db.Films)
+                int film = db.Films.Count();
+
+             
+
+                for (int i = 0; i < film; i++)
                 {
-                    ViewData["Title"] = film.Title;
+                    foreach (var filme in db.Films)
+                    {
+                        ViewData["filmList"] += filme.Title;
+                        ViewData["Title"] = filme.Title;
+                        ViewData["Img"] = filme.Img;
+
+                    } 
+                   
                 }
 
-                foreach (var film in db.Films)
-                {
-                    ViewData["Img"] = film.Img;
-                }
+         
 
-        }
+            }
             return View();
 
         }
