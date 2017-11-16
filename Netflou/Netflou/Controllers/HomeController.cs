@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Netflou.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Netflou.Controllers
 {
@@ -21,29 +22,26 @@ namespace Netflou.Controllers
             // Film filmUn = new Film();
             // filmUn.Title = "test";
 
-            using (var db = new NetflouContext())
+
+ using (var db = new NetflouContext())
             {
                 //db.Films.Add(new Film { Title = "mathilde" });
 
-              //  var count = db.SaveChanges();
- 
+                //  var count = db.SaveChanges();
 
-           
                 foreach (var film in db.Films)
                 {
-                    ViewData["Message"] = film.Title;
-                    //ViewData["Message"] = count;
+                    ViewData["Title"] = film.Title;
                 }
 
+                foreach (var film in db.Films)
+                {
+                    ViewData["Img"] = film.Img;
+                }
 
-            
-
+        }
             return View();
         }
-
-
-        }
-
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
