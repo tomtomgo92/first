@@ -17,7 +17,12 @@ namespace Netflou.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            
+            Film filmUn = new Film();
+            filmUn.Title = "test";
+
+
+            ViewData["Message"] = filmUn.Title;
 
             return View();
         }
@@ -33,5 +38,8 @@ namespace Netflou.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
     }
 }
