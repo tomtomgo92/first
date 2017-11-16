@@ -42,6 +42,11 @@ button {
   border: none;
 }
 
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .o-button {
   font-size: 0.75rem;
   line-height: 1;
@@ -171,31 +176,44 @@ button {
 }
 
 .l-cards__item {
+    position: relative;
   height: 9rem;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 16rem;
   flex: 0 0 16rem;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  background-size: cover;
-  background-position: center center;
+  overflow: hidden;
 }
 .l-cards__item + .l-cards__item {
   margin-left: 0.25rem;
 }
 
-.l-hero img {
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+.l-cards__item img, .l-hero img {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
     position: absolute;
     top:0;
     left:0;
     width: 100%;
     z-index: -1;
+}
+.l-cards__item .hover {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 999;
+}
+
+.l-cards__item:hover .hover {
+    display: block;
+}
+
+.filmTitle {
+    text-align: center;
+    line-height: 212px;
+    font-weight: 700;
 }
