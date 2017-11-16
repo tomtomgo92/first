@@ -17,9 +17,31 @@ namespace Netflou.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            
+            // Film filmUn = new Film();
+            // filmUn.Title = "test";
+
+            using (var db = new NetflouContext())
+            {
+                //db.Films.Add(new Film { Title = "mathilde" });
+
+              //  var count = db.SaveChanges();
+ 
+
+           
+                foreach (var film in db.Films)
+                {
+                    ViewData["Message"] = film.Title;
+                    //ViewData["Message"] = count;
+                }
+
+
+            
 
             return View();
+        }
+
+
         }
 
         public IActionResult Contact()
@@ -33,5 +55,8 @@ namespace Netflou.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
     }
 }
