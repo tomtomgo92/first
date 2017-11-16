@@ -14,11 +14,9 @@ namespace Netflou.Controllers
         public IActionResult Index()
         {
             var db = new NetflouContext();
-                foreach (var film in db.Films)
-                {
-                    ViewData["filmList"] += film.Title;
-                }    
-        return View();
+
+        return View(from film in db.Films
+                    select film);
         }
 
         public IActionResult About()
