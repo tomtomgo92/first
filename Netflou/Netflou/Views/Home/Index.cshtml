@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Home"] = "Home Page";
 }
 <div>@ViewData["filmList"]</div>
 <header class="l-header">
@@ -19,7 +19,7 @@
             <div class="l-hero__text">
                 <h1 class="c-title">
                     <span class="c-title__category">Original <strong>Netflix</strong></span>
-                    <span class="c-title__name">Stranger Things</span>
+                    <span class="c-title__name">@ViewData["Title"]</span>
                 </h1>
                 <p class="l-hero__subhl">Watch Season 2 Now</p>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
@@ -29,7 +29,7 @@
                     <button class="o-button o-button--gray"><i class="fa fa-plus" aria-hidden="true"></i> My List</button>
                 </div>
             </div>
-            <img src="https://album.fr/wp-content/uploads/2017/10/strangerthingsthumbjpg-6ab191_1280w.jpg">
+            <img  src="@ViewData["Img"]" />
         </div>
 
         <section class="l-cards">

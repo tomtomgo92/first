@@ -2,6 +2,18 @@
 
 <p>Use this area to provide additional information.</p>
 
-<img  src="@ViewData["Img"]" />
 
-<div class="jj">@ViewData["MesFilms"]</div>
+<div class="jj">
+
+
+@using (var db = new NetflouContext()){
+foreach (var filme in db.Films)
+                    {
+                        ViewData["filmList"] += filme.Title;
+                        ViewData["Title"] = filme.Title;
+                        ViewData["Img"] = filme.Img;
+
+                    } 
+                   
+}
+	</div>
