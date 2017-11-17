@@ -9,14 +9,38 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Netflou.Controllers
 {
+
+
     public class HomeController : Controller
     {
+        class MediaList
+        {
+            public MediaList()
+            {
+                Films = new List<Film>();
+                Series = new List<Serie>();
+            }
+
+            public List<Film> Films
+            {
+                get;
+                set;
+            }
+            public List<Serie> Series
+            {
+                get;
+                set;
+            }
+        }
+
         public IActionResult Index()
         {
             var db = new NetflouContext();
 
-        return View(from film in db.Films
-                    select film);
+            var medias = new MediaList();
+            medias.Films = db.Films.ToList();
+
+            return View(medias);
         }
 
         public IActionResult About()
@@ -28,8 +52,6 @@ namespace Netflou.Controllers
  using (var db = new NetflouContext())
             {
                 //db.Films.Add(new Film { Title = "mathilde" });
-
-
                 //  var count = db.SaveChanges();
 
                 int film = db.Films.Count();

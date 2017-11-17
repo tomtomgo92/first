@@ -2,7 +2,7 @@
 using System.Collections;
 using Microsoft.Data.Sqlite;
 
-namespace lib
+namespace Netflou.Models
 {
     public class Library
     {

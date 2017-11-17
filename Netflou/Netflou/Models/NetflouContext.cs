@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Netflou.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Netflou.Models
 {
@@ -11,15 +12,6 @@ namespace Netflou.Models
             optionsBuilder.UseSqlite("Data Source=netflou.db");
         }
 
-
-    }
-
-    public class Film
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Img { get; set; }
-        //public string Synopsis { get; set; }
 
     }
 

@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using Netflou.Models;
-using lib;
 
-namespace Netflou.Controllers
+namespace Netflou.Models
 {
 
 
@@ -10,11 +9,11 @@ namespace Netflou.Controllers
     {
         public MediaList()
         {
-            Films = new List<Film>();
+            Films = new List<Netflou.Models.Film>();
             Series = new List<Serie>();
         }
 
-        public List<Film> Films
+        public List<Netflou.Models.Film> Films
         {
             get;
             set;

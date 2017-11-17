@@ -1,28 +1,8 @@
 using System;
 
-namespace lib
+namespace Netflou.Models
 {
-    public class Serie {
-        public int Id
-        {
-            get;
-            set;
-        }
-        public string Title
-        {
-            get;
-            set;
-        }
-        public string Synopsis
-        {
-            get;
-            set;
-        }
-        public string Category
-        {
-            get;
-            set;
-        }
+    public class Serie :Media {
         public string Seasons
         {
             get;
