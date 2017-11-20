@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace lib
+namespace Netflou.Models
 {
     public class Media
     {

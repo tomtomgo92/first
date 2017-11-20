@@ -9,54 +9,32 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Netflou.Controllers
 {
-
-
     public class HomeController : Controller
     {
-        class MediaList
-        {
-            public MediaList()
-            {
-                Films = new List<Film>();
-                Series = new List<Serie>();
-            }
-
-            public List<Film> Films
-            {
-                get;
-                set;
-            }
-            public List<Serie> Series
-            {
-                get;
-                set;
-            }
-        }
-
         public IActionResult Index()
         {
             var db = new NetflouContext();
 
             var medias = new MediaList();
             medias.Films = db.Films.ToList();
+            medias.Series = db.Series.ToList();
 
             return View(medias);
         }
 
         public IActionResult About()
-        {    
+        {
             // Film filmUn = new Film();
             // filmUn.Title = "test";
 
-
- using (var db = new NetflouContext())
+            using (var db = new NetflouContext())
             {
                 //db.Films.Add(new Film { Title = "mathilde" });
                 //  var count = db.SaveChanges();
 
                 int film = db.Films.Count();
 
-             
+
 
                 for (int i = 0; i < film; i++)
                 {
@@ -65,13 +43,8 @@ namespace Netflou.Controllers
                         ViewData["filmList"] += filme.Title;
                         ViewData["Title"] = filme.Title;
                         ViewData["Img"] = filme.Img;
-
-                    } 
-                   
+                    }
                 }
-
-         
-
             }
             return View();
 
@@ -87,8 +60,5 @@ namespace Netflou.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
-
     }
 }

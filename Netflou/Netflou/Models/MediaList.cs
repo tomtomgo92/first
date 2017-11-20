@@ -3,14 +3,12 @@ using Netflou.Models;
 
 namespace Netflou.Models
 {
-
-
     public class MediaList
     {
         public MediaList()
         {
             Films = new List<Netflou.Models.Film>();
-            Series = new List<Serie>();
+            Series = new List<Netflou.Models.Serie>();
         }
 
         public List<Netflou.Models.Film> Films
@@ -18,7 +16,7 @@ namespace Netflou.Models
             get;
             set;
         }
-        public List<Serie> Series
+        public List<Netflou.Models.Serie> Series
         {
             get;
             set;

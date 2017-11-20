@@ -2,11 +2,11 @@
 using System.Collections;
 using Microsoft.Data.Sqlite;
 
-namespace lib
+namespace Netflou.Models
 {
-    public class Library
+    public class Netflou.Modelsrary
     {
-        public Library()
+        public Netflou.Modelsrary()
         {
             var connectionStringBuilder = new SqliteConnectionStringBuilder
             {
@@ -20,7 +20,7 @@ namespace lib
 
                 var selectCommand = connection.CreateCommand();
 
-                selectCommand.CommandText = "SELECT * FROM library";
+                selectCommand.CommandText = "SELECT * FROM Netflou.Modelsrary";
 
 
                 using (var reader = selectCommand.ExecuteReader())

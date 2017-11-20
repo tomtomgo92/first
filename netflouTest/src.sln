@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app", "app\app.csproj", "{D0502626-7E8A-49DD-9D46-0AD287F88A92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib", "lib\lib.csproj", "{91C81836-DDAC-4139-844E-A83A22059A88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflou.Models", "Netflou.Models\Netflou.Models.csproj", "{91C81836-DDAC-4139-844E-A83A22059A88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

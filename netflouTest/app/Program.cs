@@ -1,5 +1,5 @@
 ﻿using System;
-using lib;
+using Netflou.Models;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;

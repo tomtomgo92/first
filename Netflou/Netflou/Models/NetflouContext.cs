@@ -6,6 +6,7 @@ namespace Netflou.Models
     public class NetflouContext : DbContext
     {
         public DbSet<Film> Films { get; set; }
+        public DbSet<Serie> Series { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

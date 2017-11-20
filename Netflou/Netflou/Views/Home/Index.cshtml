@@ -1,7 +1,6 @@
 ﻿@model Netflou.Models.MediaList;
 
-@{
-    
+@{   
     ViewData["Home"] = "Home Page";
 }
 <div>@ViewData["filmList"]</div>
@@ -17,37 +16,7 @@
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
 
                 <div class="l-hero__buttons">
-                    <button class="o-button"><i class="fa fa-play" aria-hidden="true"></i> Play</button>
-
-                    <!-- Button trigger modal 
-<button type="button" class="fa fa-play btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
-
-<!-- Modal 
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XWxyRG_tckY?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
--->
-
-					
+                    <button class="o-button"><i class="fa fa-play" aria-hidden="true"></i> Play</button>				
                     <button class="o-button o-button--gray"><i class="fa fa-plus" aria-hidden="true"></i> My List</button>
                 </div>
             </div>
@@ -57,7 +26,7 @@
         <section class="l-cards">
             <h2 class="l-cards__title">TV Shows</h2>
             <ul class="l-cards__list">
-                    @foreach (Serie serie in Model.Series)
+            @foreach (Serie serie in Model.Series)
             {
                 <li class="l-cards__item">
                     <div class="hover">
